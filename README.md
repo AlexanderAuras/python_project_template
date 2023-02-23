@@ -8,12 +8,11 @@
 ![pydocstyle-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/pydocstyle.json)
 
 ## Customization
- - _pyproject.toml_ (don't forget `[tool.pytest.ini_options] addpots = <...> --cov=[NAME] <...>`)
+ - Customize _pyproject.toml_ (don't forget `[tool.pytest.ini_options] addpots = <...> --cov=[NAME] <...>`)
  - Custom _LICENSE_ (Third line must match `Copyright <YEAR> <NAME>` (or further changes are needed in _docs/source/conf.py_))
- - _README.md_
- - Configure _docs/source/index.rst_
- - `git branch -b dev`
- - Change badge sources in _README.md_
+ - Customize _README.md_ (change badge sources)
+ - Run `git branch -b dev`
+ - Customize requirements.txt
 
 ## Installation
 Via pip and PyPI:

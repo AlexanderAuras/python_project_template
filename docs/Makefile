@@ -13,5 +13,5 @@ help:
 
 html: Makefile
 	rm -rf source/*.rst
-	sphinx-apidoc -o source -e -f -t source/_templates --tocfile index ../src/hello_world
+	sphinx-apidoc -o source -e -f -t source/_templates --tocfile index ../src/*
 	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) -E -a
