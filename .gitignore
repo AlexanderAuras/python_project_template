@@ -1,0 +1,9 @@
+/dist/
+*.egg-info/
+__pycache__/
+/venv/
+.coverage
+/reports/
+.pytest_cache/
+/docs/build/
+/docs/generated/

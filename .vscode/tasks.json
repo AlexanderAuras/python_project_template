@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate documentation",
+            "type": "shell",
+            "options": {
+                "cwd": "docs"
+            },
+            "command": "make html"
+        },
+        {
+            "label": "Profile",
+            "type": "shell",
+            "command": "python -m cProfile -o performance.prof ${input:script_path}"
+        },
+        {
+            "label": "Snakeviz",
+            "type": "shell",
+            "command": "snakeviz ${input:prof_path}"
+        },
+    ],
+    "inputs": [
+        {
+            "id": "script_path",
+            "description": "Please enter the path to a python script:",
+            "type": "promptString"
+        },
+        {
+            "id": "prof_path",
+            "description": "Please enter the path to a *.prof file:",
+            "type": "promptString",
+            "default": "performance.prof"
+        },
+    ]
+}
