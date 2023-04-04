@@ -47,8 +47,8 @@ dev = [
 
 [build-system]
 requires = [
-    "setuptools", 
-    "setuptools-scm[toml]"
+    "setuptools>=67.6.0", 
+    "setuptools-scm[toml]>=7.1.0"
 ]
 build-backend = "setuptools.build_meta"
 
@@ -146,7 +146,7 @@ exclude_dirs = ["tests"]
 [tool.pytest.ini_options]
 minversion = "7.2"
 testpaths = "tests"
-addopts = "-vv -n auto --cov=hello_world --cov-report term"
+addopts = "-vv -n auto --cov=hello_world --cov-report term --cov-report lcov:lcov.info"
 console_output_style = "count"
 junit_duration_report = "call"
 junit_logging = "all"

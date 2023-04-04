@@ -106,7 +106,7 @@
     "python.analysis.typeCheckingMode": "strict",
     "python.analysis.useLibraryCodeForTypes": true,
     "python.languageServer": "Pylance",
-    "python.tensorBoard.logDirectory": "runs",
+    //"python.tensorBoard.logDirectory": "runs",
     "python.testing.pytestEnabled": true,
     "isort.check": true,
     "python.testing.pytestArgs": [

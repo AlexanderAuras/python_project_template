@@ -1,11 +1,11 @@
 # Template
 
-![tests-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/pytest.json)
-![coverage-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/pytest_cov.json)
-![pyright-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/pyright.json)
-![bandit-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/bandit.json)
-![pycodestyle-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/pycodestyle.json)
-![pydocstyle-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2F/pydocstyle.json)
+![tests-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2Fpytest.json)
+![coverage-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2Fpytest_cov.json)
+![pyright-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2Fpyright.json)
+![bandit-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2Fbandit.json)
+![pycodestyle-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2Fpycodestyle.json)
+![pydocstyle-badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAlexanderAuras%2Fpython_project_template%2Fmaster%2F.badges%2Fpydocstyle.json)
 
 ## Customization
  - Customize _pyproject.toml_ (don't forget `[tool.pytest.ini_options] addpots = <...> --cov=[NAME] <...>`)
@@ -14,7 +14,7 @@
  - Run `git branch -b dev`
  - Customize requirements.txt
 
-## Installation
+## User installation
 Via pip and PyPI:
 ```
 pip install 
@@ -32,6 +32,18 @@ To build the documentation:
 ```
 
 ## Development setup
+0. [OPTIONAL] For the greatest comfort install Visual Studio Code and these plugins:
+    - Python/Pylance/isort/Jupyter (Microsoft) _combined in the python extension_ pack
+    - Coverage Gutters (ryanluker)
+    - autoDocstring - Python Docstring Generator (Nils Werner)
+    - Todo Tree (Gruntfuggly)<br/><br/>
+
+1. Clone repository
+    ```
+    git clone <URL>
+    cd <FOLDER>
+    ```
+
 1. Create virtual environment
     ```
     python -m venv ./venv
@@ -40,8 +52,8 @@ To build the documentation:
 
 1. Setup
     ```
-    git clone <URL>
     git checkout dev
+    python -m pip install --upgrade pip
     python -m pip install --upgrade build
     python -m build
     python -m pip install --editable .[dev]
@@ -100,7 +112,7 @@ To build the documentation:
     git tag -a vX.Y.Z -m "Version X.Y.Z"
     git push vX.Y.Z
     python -m build
-    python -m twine upload --repository hello_world dist/* --username alex.aur --password *****
+    python -m twine upload --repository hello_world dist/* --username <USER> --password *****
     ```
 
 1. Deactivate environment
