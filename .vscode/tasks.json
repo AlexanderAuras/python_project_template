@@ -7,17 +7,20 @@
             "options": {
                 "cwd": "docs"
             },
-            "command": "make html"
+            "command": ". ./.venv/bin/activate; make html",
+            "problemMatcher": []
         },
         {
             "label": "Profile",
             "type": "shell",
-            "command": "python -m cProfile -o performance.prof ${input:script_path}"
+            "command": ". ./.venv/bin/activate; python -m cProfile -o performance.prof ${input:script_path}",
+            "problemMatcher": []
         },
         {
             "label": "Snakeviz",
             "type": "shell",
-            "command": "snakeviz ${input:prof_path}"
+            "command": ". ./.venv/bin/activate; snakeviz ${input:prof_path}",
+            "problemMatcher": []
         },
     ],
     "inputs": [

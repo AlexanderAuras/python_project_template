@@ -46,8 +46,8 @@ To build the documentation:
 
 1. Create virtual environment
     ```
-    python -m venv ./venv
-    . ./venv/bin/activate
+    python -m venv ./.venv
+    . ./.venv/bin/activate
     ```
 
 1. Setup
@@ -62,6 +62,7 @@ To build the documentation:
 1. Develop
     1. New branch
         ```
+        git merge master
         git checkout -b [feature|bugfix]/***
         ```
         or 
@@ -76,7 +77,7 @@ To build the documentation:
         python -m pycodestyle src tests
         python -m pydocstyle src
         python -m bandit -r -c pyproject.toml src
-        python -m pyright
+        python -m pyright src
         ```
 
     1. Test
@@ -97,11 +98,12 @@ To build the documentation:
         git checkout [dev|master]
         git merge <branch>
         git branch -d <branch>
+        git push
         ```
 
 1. Document
     ```
-    nano CHANGELOG
+    nano CHANGELOG.md
     python badges.py
     ```
 
@@ -110,7 +112,7 @@ To build the documentation:
     git commit -m "..."
     git push
     git tag -a vX.Y.Z -m "Version X.Y.Z"
-    git push vX.Y.Z
+    git push origin vX.Y.Z
     python -m build
     python -m twine upload --repository hello_world dist/* --username <USER> --password *****
     ```
